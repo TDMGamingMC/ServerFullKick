@@ -8,10 +8,11 @@ use pocketmine\event\player\PlayerPreLoginEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;	
+
 class Main extends PluginBase implements Listener{
 
 public function onLoad(){
-@mkdir($this->getDataFolder(), 0777, true);
+@mkdir($this->getDataFolder());
 if(!file_exists($this->getDataFolder())){
 			$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 			$this->config->set("Full-Message", "Server is full try again later!");

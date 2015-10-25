@@ -28,7 +28,7 @@ public function onPreLogin(PlayerPreLoginEvent $ev){
 $p = $ev->getPlayer();
 $cfg = $this->config->getAll();
  if(count($this->getServer()->getOnlinePlayers()) >= $this->getServer()->getMaxPlayers()){
- $p->kick($cfg["Full-Message");
+ $p->kick($cfg["Full-Message")};
  }
  }
  }
